@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hello my dear!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/screenfull.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Texteditor</a>
+
+            <div class="float-right">
+                <div class="btn-group">
+                    <button class="btn btn-secondary" disabled>
+                        Wielkość tekstu
+                    </button>
+
+                    <button 
+                        class="btn btn-info js--change-font-size" 
+                        data-change="-5">
+                        -5
+                    </button>
+
+                    <button 
+                        class="btn btn-info js--change-font-size" 
+                        data-change="-1">
+                        -1
+                    </button>
+
+                    <button 
+                        class="btn btn-warning js--change-font-size"
+                        data-change="1">
+                        +1
+                    </button>
+
+                    <button 
+                        class="btn btn-warning js--change-font-size"
+                        data-change="5">
+                        +5
+                    </button>
+                </div>
+
+                <button id="fullscreen-btn" class="btn btn-success">
+                    Włącz tryb pełnoekranowy
+                </button>
+
+                
+                <div class="btn-group">
+                    <button id="save-btn" class="btn btn-primary">
+                        Zapisz zmiany
+                    </button>
+
+                    <button 
+                        class="btn btn-secondary"
+                        data-toggle="tooltip" 
+                        data-placement="bottom"
+                        title="Zapisano zmiany"
+                        disabled
+                    >
+                        Ostatni zapis: <span id="save-date">05.05.2018 09:25</span>
+                    </button>
+                </div>
+                
+                
+                <button id="reset-btn" class="btn btn-danger">Od nowa</button>
+            </div>
+        </nav>
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <textarea 
+                            id="editor" 
+                            class="form-control" 
+                            style="font-size: 16px;"></textarea>
+                    </div>
+
+                    <hr>
+
+                    
+                    <div class="alert alert-secondary text-center">
+                        Ilość znaków: 
+                        <strong id="stats-chars-count">
+                            14
+                        </strong> 
+                        
+                        | 
+
+                        Ilość słów: 
+                        <strong id="stats-words-count">
+                            3
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
+
+
+

@@ -1,0 +1,41 @@
+textarea {
+	min-height: 70vh;
+}
+
+.navbar {
+	margin-bottom: 40px;
+}
+
+/*
+textarea:-webkit-full-screen {
+	color: red;
+}
+
+textarea:-moz-full-screen {
+	color: red;
+}
+
+textarea:-ms-fullscreen {
+	color: red;
+}
+
+textarea:fullscreen {
+	color: red;
+}
+*/
+
+html:-webkit-full-screen textarea {
+	color: red;
+}
+
+html:-moz-full-screen textarea {
+	color: red;
+}
+
+html:-ms-fullscreen textarea {
+	color: red;
+}
+
+html:fullscreen textarea {
+	color: red;
+}
